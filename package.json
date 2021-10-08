@@ -15,15 +15,27 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:vscode-dialog.dialog"
+        "onCommand:vscode-dialog.info-dialog",
+        "onCommand:vscode-dialog.warning-dialog",
+        "onCommand:vscode-dialog.error-dialog"
     ],
     "main": "./out/extension.js",
     "contributes": {
         "commands": [
             {
-                "command": "vscode-dialog.dialog",
+                "command": "vscode-dialog.info-dialog",
                 "category": "Dialog",
-                "title": "Open Modal"
+                "title": "Open Info Modal"
+            },
+            {
+                "command": "vscode-dialog.warning-dialog",
+                "category": "Dialog",
+                "title": "Open Warning Modal"
+            },
+            {
+                "command": "vscode-dialog.error-dialog",
+                "category": "Dialog",
+                "title": "Open Error Modal"
             }
         ]
     },
