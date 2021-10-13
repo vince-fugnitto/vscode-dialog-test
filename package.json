@@ -3,7 +3,7 @@
     "displayName": "vscode-dialog",
     "publisher": "vince-fugnitto",
     "description": "",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "repository": {
         "type": "git",
         "url": "https://github.com/vince-fugnitto/vscode-dialog-test.git"
@@ -16,6 +16,7 @@
     ],
     "activationEvents": [
         "onCommand:vscode-dialog.info-dialog",
+        "onCommand:vscode-dialog.info-dialog-content",
         "onCommand:vscode-dialog.warning-dialog",
         "onCommand:vscode-dialog.error-dialog"
     ],
@@ -26,6 +27,11 @@
                 "command": "vscode-dialog.info-dialog",
                 "category": "Dialog",
                 "title": "Open Info Modal"
+            },
+            {
+                "command": "vscode-dialog.info-dialog-content",
+                "category": "Dialog",
+                "title": "Open Info Modal (Content)"
             },
             {
                 "command": "vscode-dialog.warning-dialog",
