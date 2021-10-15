@@ -3,7 +3,7 @@
     "displayName": "vscode-dialog",
     "publisher": "vince-fugnitto",
     "description": "",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "repository": {
         "type": "git",
         "url": "https://github.com/vince-fugnitto/vscode-dialog-test.git"
@@ -15,10 +15,12 @@
         "Other"
     ],
     "activationEvents": [
+        "onCommand:vscode-dialog.error-dialog",
         "onCommand:vscode-dialog.info-dialog",
         "onCommand:vscode-dialog.info-dialog-content",
         "onCommand:vscode-dialog.warning-dialog",
-        "onCommand:vscode-dialog.error-dialog"
+        "vscode-dialog.error-dialog-noItems",
+        "vscode-dialog.info-dialog-noItems"
     ],
     "main": "./out/extension.js",
     "contributes": {
@@ -34,6 +36,11 @@
                 "title": "Open Info Modal (Content)"
             },
             {
+                "command": "vscode-dialog.info-dialog-noItems",
+                "category": "Dialog",
+                "title": "Open Info Modal (No Items)"
+            },
+            {
                 "command": "vscode-dialog.warning-dialog",
                 "category": "Dialog",
                 "title": "Open Warning Modal"
@@ -42,6 +49,11 @@
                 "command": "vscode-dialog.error-dialog",
                 "category": "Dialog",
                 "title": "Open Error Modal"
+            },
+            {
+                "command": "vscode-dialog.error-dialog-noItems",
+                "category": "Dialog",
+                "title": "Open Error Modal (No Items)"
             }
         ]
     },

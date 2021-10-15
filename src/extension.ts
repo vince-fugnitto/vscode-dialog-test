@@ -15,11 +15,21 @@ export function activate(context: vscode.ExtensionContext) {
         vscode.window.showInformationMessage(message, options, ...items);
     }));
 
+    // Information modal dialog with no items (buttons).
+    disposables.push(vscode.commands.registerCommand('vscode-dialog.info-dialog-noItems', () => {
+        vscode.window.showInformationMessage('Test No Items', { modal: true });
+    }));
+
     // Warning modal dialog.
     disposables.push(vscode.commands.registerCommand('vscode-dialog.warning-dialog', () => openModalDialog('warning')));
 
     // Error modal dialog.
     disposables.push(vscode.commands.registerCommand('vscode-dialog.error-dialog', () => openModalDialog('error')));
+
+    // Error modal dialog with no items (buttons).
+    disposables.push(vscode.commands.registerCommand('vscode-dialog.error-dialog-noItems', () => {
+        vscode.window.showErrorMessage('Test No Items', { modal: true });
+    }));
 
     context.subscriptions.push(...disposables);
 }
